@@ -167,18 +167,55 @@
       <form class="rammat" action="index.html" method="post">
         <label for="teamName">Team Name</label>
         <input type="text" name="teamName" value="" placeholder="Enter Your Team Name">
-        <select class="gameSelect" name="gameSelect" placeholder="Select Your Game">
-          <option value="selectGame" selected disabled>Select Your Game</option>
-          <option value="kabbadi">Kabbadi</option>
-          <option value="khoKho">Kho Kho</option>
-          <option value="satoliya">Satoliya</option>
-        </select>
-        <input type="submit" name="submit" value="submit">
+        <!-- <select class="gameSelect" name="gameSelect" placeholder="Select Your Game"> -->
+          <!-- <option value="selectGame" selected disabled>Select Your Game</option> -->
+          <button id="kabbadi" onclick= "whenClick1()"; value="kabbadi">Kabbadi</button>
+          <button id="khokho" onclick= "whenClick2()";value="khoKho">Kho-Kho</button>
+          <button id="satoliya" onclick= "whenClick1()"; value="satoliya">Satoliya</button>
+        <!-- </select> -->
+
+        <h3>Team Captain</h3>
+        <label for="teamCaptain">Name</label>
+        <input type="text" name="captainName" value="" placeholder="Enter Captain Name">
+        <label for="teamCaptain">Roll Number</label>
+        <input type="text" name="captainRollno" value="" placeholder="Enter Roll Number">
+        <label for="teamCaptain">Email</label>
+          <input type="email" name="captainEmail" value="" placeholder="Enter Email">
+        <label for="teamCaptain">Mobile Number</label>
+        <input type="text" name="captainNumber" value="" placeholder="Enter Mob No">
+
+
+
+<div id="hello"> </div>
+
+
+<input type="submit" name="submit" value="submit">
       </form>
     </div>
 
 
+    <script>
 
+    let i=0;
+    function whenClick1(){
+          i=7;
+        }
+        function whenClick2(){
+              i=9;
+            }
+
+    }
+
+
+
+
+   let teamMember = document.getElementById('hello');
+    for (var a=2; a<i   ;a++){
+      teamMember.innerHTML += `<h3>Team Member ${a} </h3> <label for="teamCaptain">Name</label> <input type="text" name="captainName" value="" placeholder="Enter Captain Name"> <label for="teamCaptain">Roll Number</label> <input type="text" name="captainRollno" value="" placeholder="Enter Roll Number"> <label for="teamCaptain">Email</label><input type="email" name="captainEmail" value="" placeholder="Enter Email">`;
+    }
+
+
+    </script>
 
 
 
