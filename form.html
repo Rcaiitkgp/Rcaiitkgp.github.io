@@ -168,15 +168,14 @@
 
     <div class="col formDiv">
       <h2>Register Here</h2>
-      <form class="rammat" action="index.html" method="post">
+      <form class="rammat">
         <label for="teamName">Team Name</label>
         <input type="text" name="teamName" value="" placeholder="Enter Your Team Name">
-        <!-- <select class="gameSelect" name="gameSelect" placeholder="Select Your Game"> -->
-          <!-- <option value="selectGame" selected disabled>Select Your Game</option> -->
-          <button id="kabbadi" onclick= "whenClick1()"; value="kabbadi">Kabbadi</button>
-          <button id="khokho" onclick= "whenClick2()";value="khoKho">Kho-Kho</button>
-          <button id="satoliya" onclick= "whenClick1()"; value="satoliya">Satoliya</button>
-        <!-- </select> -->
+        
+        <input type="button" id="kabbadi"  onclick="whenClick1()"; value="Kabbadi">
+        <input type="button" id="khokho"  onclick="whenClick2()"; value="Kho-Kho">
+        <input type="button" id="satoliya"  onclick="whenClick1()"; value="Satoliya">
+        
 
         <h3>Team Captain</h3>
         <label for="teamCaptain">Name</label>
@@ -184,38 +183,45 @@
         <label for="teamCaptain">Roll Number</label>
         <input type="text" name="captainRollno" value="" placeholder="Enter Roll Number">
         <label for="teamCaptain">Email</label>
-          <input type="email" name="captainEmail" value="" placeholder="Enter Email">
+        <input type="email" name="captainEmail" value="" placeholder="Enter Email">
         <label for="teamCaptain">Mobile Number</label>
         <input type="text" name="captainNumber" value="" placeholder="Enter Mob No">
 
 
 
-<div id="hello"> </div>
+        <div id="hello"></div>
 
 
-<input type="submit" name="submit" value="submit">
+        <input type="submit" name="submit" value="submit">
       </form>
     </div>
 
 
     <script>
+      var i;
+      function call() {
+        var teamMember = document.getElementById("hello");
 
-    let i=0;
-    function whenClick1(){
-          i=7;
+        for (var a = 2; a <= i; a++) {
+          teamMember.innerHTML += "<h3>Team Member " + a + " </h3> <label for='teamCaptain'>Name</label> <input type='text' name='captainName' value='' placeholder='Enter Captain Name'> <label for='teamCaptain'>Roll Number</label> <input type='text' name='captainRollno' value='' placeholder='Enter Roll Number'> <label for='teamCaptain'>Email</label><input type='email' name='captainEmail' value='' placeholder='Enter Email'>";
+
         }
-        function whenClick2(){
-              i=9;
-            }
+      }
 
-
-
-
-   let teamMember = document.getElementById('hello');
-    for (var a=2; a<i   ;a++){
-      teamMember.innerHTML += `<h3>Team Member ${a} </h3> <label for="teamCaptain">Name</label> <input type="text" name="captainName" value="" placeholder="Enter Captain Name"> <label for="teamCaptain">Roll Number</label> <input type="text" name="captainRollno" value="" placeholder="Enter Roll Number"> <label for="teamCaptain">Email</label><input type="email" name="captainEmail" value="" placeholder="Enter Email">`;
-    }
-
+      function whenClick1() {
+        i = 7;
+        call();
+        document.getElementById("kabbadi").remove();
+        document.getElementById("khokho").remove();
+        document.getElementById("satoliya").remove();
+      }
+      function whenClick2() {
+        i = 9;
+        call();
+        document.getElementById("kabbadi").remove();
+        document.getElementById("khokho").remove();
+        document.getElementById("satoliya").remove();
+      }
 
     </script>
 
@@ -332,7 +338,8 @@
             <div class="col-xl-12">
               <p class="copy_right text-center">
               <p>
-                Copyright &copy;<script>
+                Copyright &copy;
+                <script>
                   document.write(new Date().getFullYea < a / r());
                 </script><a>Rajasthan Cultural Association | IIT Kharagpur</a>
               </p>
