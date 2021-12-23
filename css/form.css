@@ -1,1 +1,14 @@
+/* classes */
 
+.gameLabel{
+  display: block;
+}
+.formDiv{
+  margin: 0 auto;
+}
+label{
+  padding: 1% 0;
+}
+input{
+  padding: 1%;
+}
