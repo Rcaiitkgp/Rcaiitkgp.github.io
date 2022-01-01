@@ -1,7 +1,17 @@
 /* classes */
 
-.gameLabel{
+#gameLabel{
   display: block;
+  border: 2px solid black;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  margin-top: 19px;
+  color: white;
+  background-color: #ff3500;
+  border-radius: 16px;
+  height: 44px;
+  padding-bottom: 31px;
 }
 .formDiv{
   margin: 0 auto;
@@ -11,4 +21,84 @@ label{
 }
 input{
   padding: 1%;
+}
+
+.hdg
+{
+  text-align: center;
+  border: 2px solid rgb(212, 157, 157);
+  width: 231px;
+  margin: 15px auto;
+  border-radius: 12px;
+  padding: 6px;
+  background-color: #FF7F3F;
+}
+.captinfo
+{
+  text-align: center;
+  border: 2px solid rgb(230, 184, 226);
+  width: 231px;
+  margin: 15px auto;
+  border-radius: 12px;
+  padding: 6px;
+  background-color: #F6D860
+  ;
+}
+.playerheading
+{
+  text-align: center;
+  border: 2px solid rgb(212, 157, 157);
+  width: 231px;
+  margin: 15px auto;
+  border-radius: 12px;
+  padding: 6px;
+  background-color: #F6D860;
+}
+.gameSelect
+{
+    /* margin: 16px 491px; */
+    /* justify-content: center; */
+    text-align: center;
+    margin-top: 16px;
+}
+#page1
+{
+  display: none;
+}
+#page2
+{
+  display: none;
+}
+#page3
+{
+  display: none;
+}
+#page4
+{
+  display: none;
+}
+#page5
+{
+  display: none;
+}
+#page6
+{
+  display: none;
+}
+#page7
+{
+  display: none;
+}
+#page8
+{
+  display: none;
+}
+#page9
+{
+  display: none;
+}
+
+body
+{
+  width: 100vw;
 }
