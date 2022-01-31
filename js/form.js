@@ -13,6 +13,10 @@ function call() {
   //   //  }
   //   console.log(whenClick0);
   // }
+  for (var a = 2; a <= i; a++) {
+    teamMember.innerHTML += "<h3>Team Member " + a + " </h3> <label for='teamCaptain' class='form-label'>Name</label> <input class='form-control' type='text' name='captainName' value='' > <label for='teamCaptain' class='form-label'>Roll Number</label> <input class='form-control' type='text' name='captainRollno' value='' > <label for='teamCaptain' class='form-label'>Email</label><input class='form-control' type='email' name='captainEmail' value=''>";
+
+  }
 }
 
 function whenClick1() {
