@@ -25,6 +25,31 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="css/timercss.css">
+  <style media="screen">
+  .timer{
+    position: relative;
+    content: "";
+    margin-left: 29%;
+    top: 0;
+    margin-top: -5%;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 100px 0px 0px 100px;
+    box-shadow: 0 15px 38px 0 rgb(0 0 0 / 10%);
+    z-index: 30;
+  }
+  body{
+    overflow-x: clip;
+  }
+  .timer2{
+    z-index: 1;
+  }
+  .timer:hover{
+    background-color: #ECECEC;
+  }
+  </style>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -124,20 +149,28 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
                         <div class="slider_text">
-                            <h3>RCA<br><span>IIT KGP</span></h3>
-                            <p>Rajasthan Cultural Association brings the spirit of Rajasthan, its rich culture and heritage.</p>
-                            <a href="about.html" class="boxed-btn4">About Us</a>
+                            <h3>Food Fest<br><span>Khamma Ghani</span></h3>
+                            <p>The wait is now over!<br> RCA is back again with its biggest event- <b style="color:white;">The Food Fest</b> <br> To collect coupon, Register Here</p><br>
+                            <div class="contact_btn align-items-center justify-content-center">
+                                <a href="https://forms.gle/vsqywKgZeHR3ugSx8" class="boxed-btn4">Register</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="dog_thumb d-none d-lg-block" align="justify">
-                <img src="img/rcaglow.png" alt="" width="500px">
+                <img style="display: block;" src="img/rcaglow.png" alt="" width="500px">
             </div>
         </div>
     </div>
     <!-- slider_area_end -->
-
+    <div class="timer">
+    <div class="col-lg-10 col-md-6 timer3">
+        <div class="timer2">
+              <b id="timerText">Food Fest: <span id="day" style="font-size: 200%;"></span> Days to go</b>
+        </div>
+    </div>
+    </div>
     <!-- service_area_start  -->
     <div class="service_area">
         <div class="container">
@@ -674,6 +707,23 @@
         var timepicker = $('#timepicker').timepicker({
          format: 'HH.MM'
      });
+    </script>
+    <script type="text/javascript">
+    var countDownDate = new Date("Mar 10, 2022 23:59:59").getTime();
+      // Run myfunc every second
+      var myfunc = setInterval(function() {
+      var now = new Date().getTime();
+      var timeleft = countDownDate - now;
+      // Calculating the days left
+      var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+      // Result is output to the specific element
+      document.getElementById("day").innerHTML = days
+      // Display the message when countdown is over
+      if (timeleft < 0) {
+          clearInterval(myfunc);
+          document.getElementById("day").innerHTML = ""
+      }
+      }, 1000);
     </script>
 </body>
 
