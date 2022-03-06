@@ -18,7 +18,7 @@ color: #FF3500;
     left: 0%;
   }
   #timerText{
-    font-size: 30px;
+    font-size: 25px !important;
   }
 }
 @media only screen and (max-width: 1200px) {
