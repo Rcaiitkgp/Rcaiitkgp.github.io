@@ -167,7 +167,7 @@
     <div class="timer">
     <div class="col-lg-10 col-md-6 timer3">
         <div class="timer2">
-              <b id="timerText">Starts in <span id="hours" style="font-size: 200%;"></span>:<span id="minutes" style="font-size: 200%;"></span></b>
+              <b id="timerText">Starts in <span id="hours" style="font-size: 200%;"></span>:<span id="minutes" style="font-size: 200%;"></span>:<span id="seconds" style="font-size: 200%;"></span></b>
         </div>
     </div>
     </div>
@@ -717,17 +717,17 @@
       // Calculating the days left
       var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-      // var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+      var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
       // Result is output to the specific element
       document.getElementById("hours").innerHTML = hours;
       document.getElementById("minutes").innerHTML = minutes;
-      // document.getElementById("seconds").innerHTML = seconds
+      document.getElementById("seconds").innerHTML = seconds
       // Display the message when countdown is over
       if (timeleft < 0) {
           clearInterval(myfunc);
           document.getElementById("hours").innerHTML = ""
           document.getElementById("minutes").innerHTML = ""
-          // document.getElementById("seconds").innerHTML = ""
+          document.getElementById("seconds").innerHTML = ""
       }
       }, 1000);
     </script>
