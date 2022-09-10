@@ -168,7 +168,7 @@
     <div class="timer">
     <div class="col-lg-10 col-md-6 timer3">
         <div class="timer2">
-              <b id="timerText">Starts in <!--<span id="hours" style="font-size: 200%;"></span>:<span id="minutes" style="font-size: 200%;"></span>-->: <span id="days" style="font-size: 150%;"></span> Days</b>
+              <b id="timerText">Starts in <span id="hours" style="font-size: 150%;"></span>:<span id="minutes" style="font-size: 150%;"></span>:<span id="seconds" style="font-size: 150%;"></span></b>
         </div>
     </div>
     </div>
@@ -710,29 +710,29 @@
      });
     </script>
     <script type="text/javascript">
-    var countDownDate = new Date("Sep 11, 2022 00:00:00").getTime();
+    var countDownDate = new Date("Sep 11, 2022 10:00:00").getTime();
       // Run myfunc every second
       var myfunc = setInterval(function() {
       var now = new Date().getTime();
       var timeleft = countDownDate - now;
 
       // Calculating the days left
-      var days = Math.floor((timeleft % (1000*60*60*24*30)) / (1000*60*60*24))+1;
-      // var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      // var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-      // var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+      // var days = Math.floor((timeleft % (1000*60*60*24*30)) / (1000*60*60*24))+1;
+      var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
       // Result is output to the specific element
-      document.getElementById("days").innerHTML = days;
-      // document.getElementById("hours").innerHTML = hours;
-      // document.getElementById("minutes").innerHTML = minutes;
-      // document.getElementById("seconds").innerHTML = seconds
+      // document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds
       // Display the message when countdown is over
       if (timeleft < 0) {
           clearInterval(myfunc);
-          document.getElementById("days").innerHTML = "0";
-          // document.getElementById("hours").innerHTML = ""
-          // document.getElementById("minutes").innerHTML = ""
-          // document.getElementById("seconds").innerHTML = ""
+          // document.getElementById("days").innerHTML = "0";
+          document.getElementById("hours").innerHTML = ""
+          document.getElementById("minutes").innerHTML = ""
+          document.getElementById("seconds").innerHTML = ""
       }
       }, 1000);
     </script>
