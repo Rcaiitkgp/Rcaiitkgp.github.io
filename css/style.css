@@ -1058,7 +1058,7 @@ h3 {
 /* line 104, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu {
   text-align: right;
-	
+
 }
 
 /* line 108, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_header.scss */
@@ -1459,7 +1459,7 @@ h3 {
   position: absolute;
   bottom: 30;
   right:auto;
-  
+
   z-index: 1;
 }
 
@@ -2008,7 +2008,7 @@ h3 {
   font-weight: 350;font-size:15px;				/*edited*/
   color: #222222;
   margin-bottom: 0;
-  
+
 }
 
 /* line 35, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_team.scss */
@@ -3453,7 +3453,7 @@ h3 {
 .contact-info .media-body h3 {
   font-size: 16px;
   margin-bottom: 0;
-  
+
   color: #2a2a2a;
 }
 
@@ -6572,14 +6572,14 @@ h6 {
 #first {
     width: 20%;
     float: left;
-    
-    
+
+
 }
 #second {
     width: 80%;
     float: left;
-    
-    
+
+
 }
 #clear {
     clear: both;
@@ -6617,7 +6617,7 @@ h6 {
 ul#menu li {
   display:inline;
   padding: inherit
-  align-content: 
+  align-content:
 }
 
 ul#menu li{
@@ -6629,16 +6629,16 @@ ul#menu li{
 /*--EDITED CSS*/
 .address-grid,
 .address-right {
-	
+
     background-color: #fff;
     -webkit-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
 	border-radius: 2rem;
-	
+
 	margin-left: 50px;
 	margin-right: 50px;
-	
+
 }
 .address-info p a {color: #999;}
 
@@ -6807,24 +6807,24 @@ div.grpp {
 	margin: 30PX 60px;
 }
 .nav1-link1{
-	
+
     border-radius: 5rem;
 	padding: 17px 60px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	margin-left: 32px;
-	
+
 }
 a.nav1-link1:link, a.nav1-link1:visited{
 	background: #f24415;
 	color: white;
-	
+
 
 }
 a.nav1-link1:hover, a.nav1-link1:active{
 	background: #c23b16;
 	color: white;
-    
+
 }
 .nav1-link2{
     border-radius: 5rem;
@@ -6832,8 +6832,8 @@ a.nav1-link1:hover, a.nav1-link1:active{
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	margin-left: 32px;
-	
-	
+
+
 }
 a.nav1-link2:link, a.nav1-link2:visited{
 	background: #f24415;
@@ -6844,16 +6844,16 @@ a.nav1-link2:link, a.nav1-link2:visited{
 a.nav1-link2:hover, a.nav1-link2:active{
 	background: #c23b16;
 	color: white;
-   
+
 }
 .nav1-link3{
-	
+
     border-radius: 5rem;
 	padding: 17px 60px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	margin-left: 32px;
-	
+
 }
 a.nav1-link3:link, a.nav1-link3:visited{
 	background: #f24415;
@@ -6864,81 +6864,81 @@ a.nav1-link3:link, a.nav1-link3:visited{
 a.nav1-link3:hover, a.nav1-link3:active{
 	background: #c23b16;
 	color: white;
-    
+
 }
 .nav1-link4{
-	
+
     border-radius: 5rem;
 	padding: 17px 60px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	margin-left: 32px;
 	white-space: nowrap;
-	
+
 }
 a.nav1-link4:link, a.nav1-link4:visited{
 	background: #f24415;
 	color: white;
-	
+
 
 }
 a.nav1-link4:hover, a.nav1-link4:active{
 	background: #c23b16;
 	color: white;
-   
-}	
+
+}
 .nav1-link5{
-	
+
     border-radius: 5rem;
 	padding: 17px 60px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	margin-left: 32px;
-	
-	
-	
+
+
+
 }
 a.nav1-link5:link, a.nav1-link5:visited{
 	background: #f24415;
 	color: white;
-	
+
 
 }
 a.nav1-link5:hover, a.nav1-link5:active{
 	background: #c23b16;
 	color: white;
-  
-}	
+
+}
 .nav1-link6{
     border-radius: 5rem;
 	padding: 17px 60px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	margin-left: 32px;
-	
+
 }
 a.nav1-link6:link, a.nav1-link6:visited{
 	background: #f24415;
 	color: white;
-	
+
 
 }
 a.nav1-link6:hover, a.nav1-link6:active{
 	background: #c23b16;
 	color: white;
-   
-}	
+
+}
 @media screen and (min-width: 601px) {
   div.pills1{
     font-size: 18px;
   }
 
-	
-	
+
+
 /*# sourceMappingURL=style.css.map */
 /*edited css*/
 .tabs {
-	
+
 }
 
 .address-right1 {
@@ -6947,7 +6947,7 @@ a.nav1-link6:hover, a.nav1-link6:active{
     -webkit-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
-	
+
 }
 
 .address-grid,
