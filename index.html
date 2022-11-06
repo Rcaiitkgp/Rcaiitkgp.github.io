@@ -149,10 +149,10 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
                         <div class="slider_text">
-                            <!-- <h3>Rammat<br><span>2K22</span></h3> -->
-                            <h3>RCA<br><span>IIT KGP</span></h3>
-                            <!-- <p>Organised for the KGP community to encourage and promote sports like Kabaddi and Kho-Kho.</p><br> -->
-                            <p>Rajasthan Cultural Association brings the spirit of Rajasthan, its culture and heritage.</p><br>
+                            <h3>मल्हार<br><span>2K22</span></h3>
+                            <!-- <h3>RCA<br><span>IIT KGP</span></h3> -->
+                            <p>A fun event full of cultural events like standup comedy, dance, singing.</p><br>
+                            <!-- <p>Rajasthan Cultural Association brings the spirit of Rajasthan, its culture and heritage.</p><br> -->
                             <div class="contact_btn align-items-center justify-content-center">
                                 <!-- <a href="rammat.html" class="boxed-btn4">Register Here!!</a> -->
                                 <a href="about.html" class="boxed-btn4">About Us</a>
@@ -167,13 +167,13 @@
         </div>
     </div>
     <!-- slider_area_end -->
-    <!-- <div class="timer">
+    <div class="timer">
     <div class="col-lg-10 col-md-6 timer3">
         <div class="timer2">
               <b id="timerText">Starts in <span id="hours" style="font-size: 150%;"></span>H :<span id="minutes" style="font-size: 150%;"></span>M :<span id="seconds" style="font-size: 150%;"></span>S</b>
         </div>
     </div>
-    </div> -->
+    </div>
     <!-- service_area_start  -->
     <div class="service_area">
         <div class="container">
@@ -712,15 +712,15 @@
      });
     </script>
     <script type="text/javascript">
-    var countDownDate = new Date("Sep 11, 2022 10:00:00").getTime();
+    var countDownDate = new Date("Nov 07, 2022 18:45:00").getTime();
       // Run myfunc every second
       var myfunc = setInterval(function() {
       var now = new Date().getTime();
       var timeleft = countDownDate - now;
 
       // Calculating the days left
-      // var days = Math.floor((timeleft % (1000*60*60*24*30)) / (1000*60*60*24))+1;
-      var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var days = Math.floor((timeleft % (1000*60*60*24*30)) / (1000*60*60*24))+1;
+      var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))+days*24;
       var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
       // Result is output to the specific element
