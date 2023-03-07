@@ -94,7 +94,7 @@
                         Registration Form
                     </h2>
                     <div class="container">
-                        <form action="" method="post">
+                        <form action="https://e15e6s-8282.preview.csb.app/razorpay" method="POST">
                             <div class="khamma-form-inputs-container">
                                 <div class="row d-flex justify-content-center flex-nowrap">
                                     <input type="text" id="name" name="name" placeholder="Name"
@@ -112,20 +112,25 @@
                                 <div class="row d-flex justify-content-center flex-nowrap">
                                     <input type="text" id="email" name="email" placeholder="Email"
                                         class="khamma-form-inputs col-md-6" required>
-                                    <input type="text" id="phone" name="phone" placeholder="Phone Number"
-                                        class="khamma-form-inputs col-md-6" required>
+                                    <input type="text" id="otp" name="otp" placeholder="Enter OTP"
+                                        class="khamma-form-inputs col-md-6">
                                 </div>
 
-
-                                <input type="number" id="couponNumbers" name="couponNumbers"
-                                    placeholder="Number of Coupons" class="khamma-form-inputs col-md-6" required
-                                    min="1" oninput="updateButton()">
+                                <div class="row d-flex justify-content-center flex-nowrap">
+                                    <input type="text" id="contact" name="contact" placeholder="Phone Number"
+                                        class="khamma-form-inputs col-md-6" required>
+                                    <input type="number" id="couponNumbers" name="number_of_coupons"
+                                        placeholder="Number of Coupons" class="khamma-form-inputs col-md-6" required
+                                        min="1" oninput="updateButton()">
+                                </div>
                             </div>
                             <div class="khamma-button-container">
                                 <button id="khamma-submit-button" type="submit" class="khamma-submit-btn col-md-6"><i
                                         class="fa fa-credit-card mr-3"></i>Book Passes Now <p id="khamma-price-display">
                                     </p></button>
                             </div>
+                            <input type="hidden" name="description" id="amount"
+                                value="Payment for Buying Coupon - Paisa dede BC">
                         </form>
                     </div>
                 </div>
