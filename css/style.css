@@ -6992,7 +6992,7 @@ a.nav1-link6:hover, a.nav1-link6:active{
 }
 
 .khamma-form-inputs {
-  margin: 0.5rem 0;
+  margin: 0.5rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   border: none;
@@ -7026,4 +7026,18 @@ a.nav1-link6:hover, a.nav1-link6:active{
 .khamma-submit-btn:hover {
   transform: scale(1.05);
   transition: all .3s linear;
+}
+
+.khamma-form-inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#khamma-price-display {
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: inline;
+  color: white;
 }

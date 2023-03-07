@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="js/khamma.js"></script>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="bradcam_text text-center">
-                            <h3>Khamma Ghani</h3>
+                            <h3>Khamma Ghani - The Food Fest 2023</h3>
                         </div>
                     </div>
                 </div>
@@ -90,33 +91,49 @@
                 </div>
                 <div class="khamma-page-right col-md-8">
                     <h2 class="khamma-form-heading">
-                        Payment Form
+                        Registration Form
                     </h2>
                     <div class="container">
                         <form action="" method="post">
-                            <input type="text" id="fname" name="firstname" placeholder="First Name"
-                                class="khamma-form-inputs col-md-12" required>
-                            <input type="text" id="lname" name="lastname" placeholder="Last Name"
-                                class="khamma-form-inputs col-md-12" required>
+                            <div class="khamma-form-inputs-container">
+                                <div class="row d-flex justify-content-center flex-nowrap">
+                                    <input type="text" id="name" name="name" placeholder="Name"
+                                        class="khamma-form-inputs col-md-6" required>
+                                    <input type="text" id="rollNumber" name="rollNumber" placeholder="Roll Number"
+                                        required class="khamma-form-inputs col-md-6">
+                                </div>
+                                <div class="row d-flex justify-content-center flex-nowrap">
+                                    <input type="text" id="hall" name="hall" placeholder="Hall"
+                                        class="khamma-form-inputs col-md-6" required>
+
+                                    <input type="text" id="room" name="room" placeholder="Room Number"
+                                        class="khamma-form-inputs col-md-6" required>
+                                </div>
+                                <div class="row d-flex justify-content-center flex-nowrap">
+                                    <input type="text" id="email" name="email" placeholder="Email"
+                                        class="khamma-form-inputs col-md-6" required>
+                                    <input type="text" id="phone" name="phone" placeholder="Phone Number"
+                                        class="khamma-form-inputs col-md-6" required>
+                                </div>
 
 
-                            <input type="text" id="email" name="email" placeholder="Email"
-                                class="khamma-form-inputs col-md-12" required>
-                            <input type="text" id="phone" name="phone" placeholder="Phone Number"
-                                class="khamma-form-inputs col-md-12" required>
-
-                            <input type="text" id="rollNumber" name="rollNumber" placeholder="Roll Number" required
-                                class="khamma-form-inputs col-md-12">
-                            <div class="khamma-button-container">
-                                <button type="submit" class="khamma-submit-btn col-md-6"><i class="fa fa-credit-card mr-3"></i>Pay on Razorpay</button>
+                                <input type="number" id="couponNumbers" name="couponNumbers"
+                                    placeholder="Number of Coupons" class="khamma-form-inputs col-md-6" required
+                                    min="1" oninput="updateButton()">
                             </div>
-
+                            <div class="khamma-button-container">
+                                <button id="khamma-submit-button" type="submit" class="khamma-submit-btn col-md-6"><i
+                                        class="fa fa-credit-card mr-3"></i>Book Passes Now <p id="khamma-price-display">
+                                    </p></button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
 
 
