@@ -6616,8 +6616,8 @@ h6 {
 
 ul#menu li {
   display:inline;
-  padding: inherit
-  align-content:
+  padding: inherit;
+  align-content: center;
 }
 
 ul#menu li{
@@ -6956,4 +6956,74 @@ a.nav1-link6:hover, a.nav1-link6:active{
     -webkit-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
+}
+
+
+.khamma-page {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.khamma-page-left, .khamma-page-right {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.khamma-page-left {
+  background: rgb(231,37,21);
+  background: linear-gradient(330deg, rgba(231,37,21,1) 0%, rgba(254,99,22,1) 100%);
+  color: white;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.khamma-page-right {
+}
+
+.khamma-form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.khamma-form-inputs {
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+}
+
+.khamma-outer {
+  margin: 2rem 0;
+}
+
+.khamma-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.khamma-submit-btn {
+  background: linear-gradient(330deg, rgba(231,37,21,1) 0%, rgba(254,99,22,1) 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all .3s linear;
+}
+
+.khamma-submit-btn:hover {
+  transform: scale(1.05);
+  transition: all .3s linear;
 }
