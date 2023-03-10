@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scanner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght 450&display=swap" rel="stylesheet">
+    <style>
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        #success-inner1 {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            width: 50vw;
+            min-width: 700px;
+            height: 3.5rem;
+            background-color: #c75f0a;
+        }
+        #success-inner1 h2{
+            text-align: center;
+            font-family: 'Poppins', sans-serif;;
+        }
+
+        #success-inner2 {
+            width: 50vw;
+            min-width: 700px;
+            min-height: 6rem;
+            text-align: center;
+            background-color: rgb(221, 224, 228);
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        #success-inner2 h2 {
+            text-align: center;
+            padding: 1rem;
+
+        }
+        /* #html5-qrcode-button-camera-start{
+            width: 4rem;
+            height: 2rem;
+            padding: 1rem;
+            background-color: #c75f0a;
+            color: aliceblue;
+            border-radius: 5px;
+        }
+        #html5-qrcode-button-camera-stop{
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="success-container">
+        <div id="success-inner1">
+            <h2>Scan QR</h2>
+        </div>
+        <div id="success-inner2">
+            <div style="display: flex;align-items: center;">
+                <div style="width: 700px;margin:1.5rem;" id="reader"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script>
+        function onScanSuccess(decodedText, decodedResult) {
+            window.location.replace("https://e15e6s-8282.preview.csb.app/check/"+decodedText+"/test");
+            html5QrcodeScanner.clear()
+        }
+        var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 450});
+            html5QrcodeScanner.render(onScanSuccess);
+    </script>
+</body>
+
+</html>
