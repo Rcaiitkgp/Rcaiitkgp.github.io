@@ -5,16 +5,28 @@
   .payment
 	{
 		border:1px solid #f86808;
-		height:280px;
+        width: 35vw;
+        margin: 2rem auto;
+		/* height:280px; */
         background:#fff;
+        margin-bottom: 1.5rem;
 	}
+    @media only screen and (max-width: 768px)  {
+        .payment{
+            width: 70vw;
+        }
+    }
+    @media only screen and (max-width: 1200px) and (min-width: 768px) {
+        .payment{
+            width: 50vw;
+        }
+    }
    .payment_header
    {
 	   background:rgba(255,102,0,1);
 	   padding:20px;
 	   
    }
-   
    .check
    {
 	   margin:0px auto;
@@ -35,6 +47,7 @@
     .content 
     {
         text-align:center;
+        padding: 0px 1.5rem;
     }
 
     .content  h1
@@ -59,4 +72,9 @@
     {
         text-decoration:none;
         background:#000;
+    }
+    #qrimage{
+        display: none;
+        width: 350px;
+        margin: 0px auto;
     }
