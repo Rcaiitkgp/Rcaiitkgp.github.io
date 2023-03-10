@@ -258,7 +258,7 @@ app.get("/mail", async function (req, res) {
       return console.log(error);
     }
     //console.log('Message %s sent: %s', info.messageId, info.response);
-    res.redirect(process.env.WEBSITE_URL + "/payment");
+    res.redirect(process.env.WEBSITE_URL + "/payment.html");
   });
 });
 //Admin Part
@@ -281,16 +281,16 @@ app.get("/check/:paymentLink/:password", async function (req, res) {
           }
         );
         console.log(docs);
-        res.redirect(process.env.WEBSITE_URL + "/congrats");
+        res.redirect(process.env.WEBSITE_URL + "/congrats.html");
       } else {
-        res.redirect(process.env.WEBSITE_URL + "/failed");
+        res.redirect(process.env.WEBSITE_URL + "/failed.html");
       }
     } else {
       //Check here for correct id
-      res.redirect(process.env.WEBSITE_URL + "/failed");
+      res.redirect(process.env.WEBSITE_URL + "/failed.html");
     }
   } else {
-    res.redirect(process.env.WEBSITE_URL + "/failed");
+    res.redirect(process.env.WEBSITE_URL + "/failed.html");
   }
 });
 
