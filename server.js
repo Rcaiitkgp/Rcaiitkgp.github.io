@@ -93,7 +93,7 @@ app.get("/",function(req,res){
 });
 app.post("/razorpay", async function (req, res) {
     if(req.body.number_of_coupons<=0){
-        res.redirect(process.env.WEBSITE_URL + "/failure");
+        res.redirect(process.env.WEBSITE_URL + "/failure.html");
     }
   console.log("IN");
   const uid = new shortId();
@@ -153,7 +153,7 @@ app.post("/razorpay", async function (req, res) {
     })
     .catch((err) => {
       console.log(err);
-      res.redirect(process.env.WEBSITE_URL + "/failure");
+      res.redirect(process.env.WEBSITE_URL + "/failure.html");
     });
 });
 
@@ -163,7 +163,7 @@ app.get("/verify/:token", async function (req, res) {
   if (found.length != 0) {
     res.redirect(found[0].short_url);
   } else {
-    res.redirect(process.env.WEBSITE_URL + "/failure");
+    res.redirect(process.env.WEBSITE_URL + "/failure.html");
   }
 });
 
@@ -200,12 +200,12 @@ app.get("/mail2/:token", function (req, res) {
   req.params.token +
   '</a>'+"<p> In case the link doesn’t work, you are advised to re-register through the registration page-"+'<a href="' +
   process.env.WEBSITE_URL +
-  "/KhammaGhani"+
+  "/KhammaGhani.html"+
   '">' +
   process.env.WEBSITE_URL +
   "/KhammaGhani" +'</a>'+
   "</p><p>Feel free to "+'<a href="'+process.env.WEBSITE_URL +
-  "/contact"
+  "/contact.html"
   +'">' +
   "reach out" +'</a>' +" to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
   const mailOptions = {
