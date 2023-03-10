@@ -204,11 +204,10 @@ app.get("/mail2/:token", function (req, res) {
   '">' +
   process.env.WEBSITE_URL +
   "/KhammaGhani" +'</a>'+
-  "</p><p>Feel free to reach out"+   process.env.WEBSITE_URL +
+  "</p><p>Feel free to "+'<a href="'+process.env.WEBSITE_URL +
   "/contact"
   +'">' +
-  process.env.WEBSITE_URL +
-  "/contact" +'</a>' +"to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
+  "reah out" +'</a>' +" to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
   const mailOptions = {
     from: process.env.GMAILID,
     to: req.query.email,
@@ -219,7 +218,7 @@ app.get("/mail2/:token", function (req, res) {
 
   Transporter.sendMail(mailOptions)
     .then((response) => {
-      res.redirect(process.env.WEBSITE_URL + "/registrationsuccessful");
+      res.redirect(process.env.WEBSITE_URL + "/registrationsuccessful.html");
     })
     .catch((err) => {
       console.log(err);
