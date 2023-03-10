@@ -232,6 +232,11 @@ app.get("/mail", async function (req, res) {
     text: "Payment Successful", // plain text body
     attachDataUrls: true,
     html: 'Please find the QR code Below </br> <img src="' + img + '">', // html body
+    attachments:[
+        {
+            path: img
+        }
+    ]
   };
 
   Transporter.sendMail(mailOptions, (error, info) => {
