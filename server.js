@@ -206,7 +206,7 @@ app.get("/mail2/:token", function (req, res) {
   "/KhammaGhani" +'</a>'+
   "</p><p>Feel free to reach out"+   process.env.WEBSITE_URL +
   "/contact"
-  '">' +
+  +'">' +
   process.env.WEBSITE_URL +
   "/contact" +'</a>' +"to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
   const mailOptions = {
