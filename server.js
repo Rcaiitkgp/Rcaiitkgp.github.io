@@ -231,10 +231,11 @@ app.get("/mail", async function (req, res) {
   let img = await QRCode.toDataURL(id);
 
   const Transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.hostinger.com",
+    port: 465,
     auth: {
-      user: process.env.GMAILID,
-      pass: process.env.GMAILAPPPASSWORD,
+    user: process.env.GMAILID,
+    pass: process.env.GMAILAPPPASSWORD
     },
     from: process.env.GMAILID,
   });
