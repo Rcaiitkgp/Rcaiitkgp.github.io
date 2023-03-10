@@ -27,41 +27,46 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="js/khamma.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  <style media="screen">
-    .timer {
-      position: relative;
-      content: "";
-      margin-left: 29%;
-      top: 0;
-      margin-top: -5%;
-      width: 71%;
-      height: 100%;
-      background: #ffffff;
-      border-radius: 100px 0px 0px 100px;
-      box-shadow: 0 15px 38px 0 rgb(0 0 0 / 10%);
-      z-index: 30;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <style media="screen">
+        .timer {
+            position: relative;
+            content: "";
+            margin-left: 29%;
+            top: 0;
+            margin-top: -5%;
+            width: 71%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 100px 0px 0px 100px;
+            box-shadow: 0 15px 38px 0 rgb(0 0 0 / 10%);
+            z-index: 30;
+        }
 
-    body {
-      overflow-x: clip;
-    }
+        body {
+            overflow-x: clip;
+        }
 
-    .timer2 {
-      z-index: 1;
-    }
+        .timer2 {
+            z-index: 1;
+        }
 
-    .timer:hover {
-      background-color: #ECECEC;
-    }
-    /* modal css  start*/
-    a{
-      text-decoration: none;
-    }
-    /* modal css end */
-  </style>
-  
+        .timer:hover {
+            background-color: #ECECEC;
+        }
+
+        /* modal css  start*/
+        a {
+            text-decoration: none;
+        }
+
+        /* modal css end */
+    </style>
+
 </head>
 
 <body>
@@ -134,29 +139,64 @@
                             <div class="khamma-form-inputs-container">
                                 <div
                                     class="row d-flex justify-content-center flex-lg-nowrap flex-md-nowrap flex-sm-wrap">
-                                    <input type="text" id="name" name="name" placeholder="Name"
+                                    <input type="text" id="FirstName" name="FirstName" placeholder="FirstName"
                                         class="khamma-form-inputs col-md-6" required>
-                                    <input type="text" id="rollNumber" name="rollNumber" placeholder="Roll Number"
-                                        required class="khamma-form-inputs col-md-6">
+                                    <input type="text" id="LastName" name="LastName" placeholder="LastName"
+                                        class="khamma-form-inputs col-md-6" required>
+
                                 </div>
                                 <div
                                     class="row d-flex justify-content-center flex-lg-nowrap flex-md-nowrap flex-sm-wrap">
-                                    <input type="text" id="hall" name="hall" placeholder="Hall"
-                                        class="khamma-form-inputs col-md-6" required>
 
-                                        <input type="text" id="email" name="email" placeholder="Email"
-                                        class="khamma-form-inputs col-md-6" required>
-
-                                    <!-- <input type="text" id="room" name="room" placeholder="Room Number"
+                                    <input type="text" id="rollNumber" name="rollNumber" placeholder="Roll Number"
+                                        required class="khamma-form-inputs col-md-6">
+                                    <!-- <input type="text" id="hall" name="hall" placeholder="Hall"
                                         class="khamma-form-inputs col-md-6" required> -->
+
+                                    <input list="browsers" name="browser" id="browser" required
+                                        class="khamma-form-inputs col-md-6" placeholder="Hall">
+                                    <datalist id="browsers">
+                                        <option value="Azad">
+                                        <option value="BC Roy">
+                                        <option value="BRH">
+                                        <option value="Gokhale">
+                                        <option value="HJB">
+                                        <option value="JCB">
+                                        <option value="LLR">
+                                        <option value="LBS">
+                                        <option value="MMM">
+                                        <option value="MS">
+                                        <option value="MT">
+                                        <option value="Nehru">
+                                        <option value="Patel">
+                                        <option value="RK">
+                                        <option value="RP">
+                                        <option value="RLB">
+                                        <option value="SAM">
+                                        <option value="SNVH">
+                                        <option value="SNIG">
+                                        <option value="VS">
+                                        <option value="VSRC">
+                                        <option value="Zakir Hussain Hall">
+                                        
+
+
+
+                                    </datalist>
+
+
+
+
                                 </div>
-                                <!-- <div
+                                <div
                                     class="row d-flex justify-content-center flex-lg-nowrap flex-md-nowrap flex-sm-wrap">
+                                    <input type="text" id="room" name="room" placeholder="Room Number"
+                                        class="khamma-form-inputs col-md-6" required>
                                     <input type="text" id="email" name="email" placeholder="Email"
                                         class="khamma-form-inputs col-md-6" required>
-                                    <input type="text" id="otp" name="otp" placeholder="Enter OTP"
-                                        class="khamma-form-inputs col-md-6">
-                                </div> -->
+                                    <!-- <input type="text" id="otp" name="otp" placeholder="Enter OTP"
+                                        class="khamma-form-inputs col-md-6"> -->
+                                </div>
 
                                 <div
                                     class="row d-flex justify-content-center flex-lg-nowrap flex-md-nowrap flex-sm-wrap">
@@ -186,74 +226,89 @@
 
 
     <!-- Form Ends Here-->
-        <!--FAQ starts-->
-        <h1 class="FAQ">FAQ's</h1>
-        <div class="container">
+    <!--FAQ starts-->
+    <h1 class="FAQ">FAQ's</h1>
+    <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    What is Khamma Ghani?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Khamma Ghani is the annual food fest event organised by RCA IIT Kharagpur, which provides the opportunity to enjoy Rajasthani dishes like Dal, Baati, Churma, Chachh and many more. </strong>
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is Khamma Ghani?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Khamma Ghani is the annual food fest event organised by RCA IIT Kharagpur, which
+                            provides the opportunity to enjoy Rajasthani dishes like Dal, Baati, Churma, Chachh and many
+                            more. </strong>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    What about DJ and Dance facilities?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>The dance facility is included in the pass you buy for Khamma Ghani - The FoodFest 2023.</strong> 
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What about DJ and Dance facilities?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>The dance facility is included in the pass you buy for Khamma Ghani - The FoodFest
+                            2023.</strong>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Can I book my passes one or two days before the event?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>It is not advised because we have seen passes get sold out at least two days before the event.</strong> 
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I book my passes one or two days before the event?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>It is not advised because we have seen passes get sold out at least two days before the
+                            event.</strong>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Will we get physical passes after booking the passes?
-                  </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Will we get physical passes after booking the passes?
+                    </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>No, you will get a unique QR Code delivered to your inbox.</strong>
-                  </div>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>No, you will get a unique QR Code delivered to your inbox.</strong>
+                    </div>
                 </div>
-              </div>
-              <div class="accordion-item">
+            </div>
+            <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    I booked my passes, and payment got deducted but QR Code was not delivered to my email?
-                  </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        I booked my passes, and payment got deducted but QR Code was not delivered to my email?
+                    </button>
                 </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>In such a situation, please contact us as soon as possible to sort out the issue..</strong> 
-                  </div>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>In such a situation, please contact us as soon as possible to sort out the
+                            issue..</strong>
+                    </div>
                 </div>
-              </div>
-          </div>
-          </div>
-        <!--FAQ ends-->
-    
+            </div>
+        </div>
+    </div>
+    <!--FAQ ends-->
+
 
     <footer class="footer">
         <div class="footer_top">
@@ -367,8 +422,8 @@
             </div>
         </div>
     </footer>
-  <script src="js/jquery.slicknav.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
