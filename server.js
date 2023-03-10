@@ -258,7 +258,7 @@ app.get("/mail", async function (req, res) {
       return console.log(error);
     }
     //console.log('Message %s sent: %s', info.messageId, info.response);
-    res.redirect(process.env.WEBSITE_URL + "/payment.html");
+    res.redirect(process.env.WEBSITE_URL + "/payment.html?qrcode="+img);
   });
 });
 //Admin Part
