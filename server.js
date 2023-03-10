@@ -92,6 +92,9 @@ app.get("/",function(req,res){
     res.send("I am On");
 });
 app.post("/razorpay", async function (req, res) {
+    if(req.body.number_of_coupons<=0){
+        res.redirect(process.env.WEBSITE_URL + "/failure");
+    }
   console.log("IN");
   const uid = new shortId();
   const token = uid.stamp(32);
