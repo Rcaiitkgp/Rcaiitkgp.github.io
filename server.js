@@ -52,7 +52,7 @@ mongoose.set("strictQuery", true);
 // app.use(passport.session());
 
 mongoose.connect(
-  "mongodb+srv://rcaiitkgppayments:P1arIVjFWGfYKS3H@clusterrca.4f9m5ke.mongodb.net/RCA",
+  "mongodb+srv://rcaiitkgppayments:"+process.env.MONGO_PASSWORD+"@clusterrca.4f9m5ke.mongodb.net/RCA",
   { useNewUrlParser: true }
 );
 
@@ -150,6 +150,7 @@ app.post("/razorpay", async function (req, res) {
     })
     .catch((err) => {
       console.log(err);
+      res.redirect(process.env.WEBSITE_URL + "/failure");
     });
 });
 
@@ -159,7 +160,7 @@ app.get("/verify/:token", async function (req, res) {
   if (found.length != 0) {
     res.redirect(found[0].short_url);
   } else {
-    res.redirect(process.env.WEBSITE_URL + "/succesful");
+    res.redirect(process.env.WEBSITE_URL + "/failure");
   }
 });
 
@@ -173,7 +174,7 @@ app.get("/success/razorpay", async function (req, res) {
     }
   );
   const email = docs.email;
-  res.redirect("/mail?email=" + email + "&id=" + docs.id);
+  res.redirect("/mail?email=" + email + "&id=" + docs.id+"&passes="+docs.coupons);
 });
 
 //Sending mails using nodemailer
@@ -186,26 +187,36 @@ app.get("/mail2/:token", function (req, res) {
     },
     from: process.env.GMAILID,
   });
+  const data = "<p>Thanks for submitting your information for booking your pass of Khamma Ghani - The FoodFest 2023. </p> <br>Please click the link below to verify your email address and complete the booking of your pass by paying the applicable fees: <br>"+'<a href="' +
+  process.env.SELF_URL +
+  "/verify/" +
+  req.params.token +
+  '">' +
+  process.env.SELF_URL +
+  '/verify/' +
+  req.params.token +
+  '</a>'+"<p> In case the link doesn’t work, you are advised to re-register through the registration page-"+'<a href="' +
+  process.env.WEBSITE_URL +
+  "/KhammaGhani"
+  '">' +
+  process.env.WEBSITE_URL +
+  "/KhammaGhani" +'</a>'+
+  "</p><p>Feel free to reach out"+   process.env.WEBSITE_URL +
+  "/contact"
+  '">' +
+  process.env.WEBSITE_URL +
+  "/contact" +'</a>' +"to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
   const mailOptions = {
     from: process.env.GMAILID,
     to: req.query.email,
-    subject: "Team, RCA IITKGP",
+    subject: "Verify your email Address!!",
     text: "Please verify your email!!",
-    html:
-      '<a href="' +
-      process.env.SELF_URL +
-      "/verify/" +
-      req.params.token +
-      '">' +
-      process.env.SELF_URL +
-      "/verify/" +
-      req.params.token +
-      "</a>",
+    html:data
   };
 
   Transporter.sendMail(mailOptions)
     .then((response) => {
-      res.redirect(process.env.WEBSITE_URL + "/succesful");
+      res.redirect(process.env.WEBSITE_URL + "/registrationsuccessful");
     })
     .catch((err) => {
       console.log(err);
@@ -225,13 +236,14 @@ app.get("/mail", async function (req, res) {
     },
     from: process.env.GMAILID,
   });
+  const data = "<p><b>Congratulations!</b><br> You have successfully booked your pass/passes for Khamma Ghani - The Foodfest 2023. </p><p>Please find your pass in the attachment, a unique QR Code. </p><p>The pass is your unique QR Code which you need to bring at the time of the event for checking before entry to the venue. In case of registration of more than one pass, you are advised to come together at the venue for smooth verification </p><p>Please note:</p><p>Number of Passes Booked: "+req.query.passes+" <br><b>Date of Event: 17th March 2023<br>Timings: 07:00 PM onwards</b></p><p>Looking forward to your presence in the event. <br>Thanks for registering for Khamma Ghani</p><b>Team RCA IIT Kharagpur</b>"
   let mailOptions = {
     from: process.env.GMAILID, // sender address
     to: req.query.email, // list of receivers
     subject: "Team, RCA IITKGP", // Subject line
-    text: "Payment Successful", // plain text body
+    // text: "Payment Successful", // plain text body
     attachDataUrls: true,
-    html: 'Please find the QR code Below </br> <img src="' + img + '">', // html body
+    html: data, // html body
     attachments:[
         {
             path: img
@@ -244,7 +256,7 @@ app.get("/mail", async function (req, res) {
       return console.log(error);
     }
     //console.log('Message %s sent: %s', info.messageId, info.response);
-    res.redirect(process.env.WEBSITE_URL + "/succesful");
+    res.redirect(process.env.WEBSITE_URL + "/payment");
   });
 });
 //Admin Part
