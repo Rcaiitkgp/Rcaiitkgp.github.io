@@ -183,7 +183,8 @@ app.get("/success/razorpay", async function (req, res) {
 //Sending mails using nodemailer
 app.get("/mail2/:token", function (req, res) {
   const Transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.hostinger.com",
+    port: 465,
     auth: {
       user: process.env.GMAILID,
       pass: process.env.GMAILAPPPASSWORD,
