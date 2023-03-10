@@ -197,7 +197,7 @@ app.get("/mail2/:token", function (req, res) {
   req.params.token +
   '</a>'+"<p> In case the link doesn’t work, you are advised to re-register through the registration page-"+'<a href="' +
   process.env.WEBSITE_URL +
-  "/KhammaGhani"
+  "/KhammaGhani"+
   '">' +
   process.env.WEBSITE_URL +
   "/KhammaGhani" +'</a>'+
