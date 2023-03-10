@@ -207,7 +207,7 @@ app.get("/mail2/:token", function (req, res) {
   "</p><p>Feel free to "+'<a href="'+process.env.WEBSITE_URL +
   "/contact"
   +'">' +
-  "reah out" +'</a>' +" to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
+  "reach out" +'</a>' +" to us in case of payment, registration or passes issues. <br><br>Thanks <br>Team RCA IIT Kharagpur</p>";
   const mailOptions = {
     from: process.env.GMAILID,
     to: req.query.email,
