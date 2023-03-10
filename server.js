@@ -88,7 +88,9 @@ const userSchema = new mongoose.Schema({
   short_url: String,
 });
 const User = mongoose.model("User", userSchema);
-
+app.get("/",function(req,res){
+    res.send("I am On");
+});
 app.post("/razorpay", async function (req, res) {
   console.log("IN");
   const uid = new shortId();
