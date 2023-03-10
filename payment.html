@@ -20,6 +20,44 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="css/timercss.css">
+  <script src="js/khamma.js"></script>
+  <style media="screen">
+    .timer {
+      position: relative;
+      content: "";
+      margin-left: 29%;
+      top: 0;
+      margin-top: -5%;
+      width: 71%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 100px 0px 0px 100px;
+      box-shadow: 0 15px 38px 0 rgb(0 0 0 / 10%);
+      z-index: 30;
+    }
+
+    body {
+      overflow-x: clip;
+    }
+
+    .timer2 {
+      z-index: 1;
+    }
+
+    .timer:hover {
+      background-color: #ECECEC;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
 
   <script src="https://kit.fontawesome.com/532c3b50d5.js" crossorigin="anonymous"></script>
 
@@ -69,7 +107,7 @@
 
               <div class="containerlogo">
                 <div id="first1"><img src="img/RCA-LOGO-PNG.png" alt="RCA" width="50px"></div>
-                <div id="second1"><a href="index.html">
+                <div id="second1"><a href="index.html" style="text-decoration: none;">
                     <font color="f28121">Rajasthan Cultural Association<br>IIT Kharagpur</font>
                   </a></div>
               </div>
@@ -80,8 +118,8 @@
             <div class="main-menu  d-none d-lg-block">
               <nav>
                 <ul id="navigation">
-                  <li><a href="index.html">home</a></li>
-                  <li><a href="about.html">about</a></li>
+                  <li><a href="index.html " style="text-decoration: none;">home</a></li>
+                  <li><a href="about.html" style="text-decoration: none;">about</a></li>
                   <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">blog</a></li>
@@ -97,11 +135,11 @@
 
                                             </ul>
                                         </li>-->
-                  <li><a href="events.html">Events</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="sponsors.html">Our Sponsors</a></li>
-                  <li><a href="alumni.html">Our Alumni</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="events.html" style="text-decoration: none;">Events</a></li>
+                  <li><a href="team.html" style="text-decoration: none;">Team</a></li>
+                  <li><a href="sponsors.html" style="text-decoration: none;">Our Sponsors</a></li>
+                  <li><a href="alumni.html" style="text-decoration: none;">Our Alumni</a></li>
+                  <li><a href="contact.html" style="text-decoration: none;">Contact</a></li>
                 </ul>
               </nav>
             </div>
@@ -139,14 +177,15 @@
         <h1>Payment Successfull !</h1>
         <p>We have successfully reserved your passes. Please check your mail for your pass for Khamma Ghani - The
           Foodfest 2023</p>
-        <a href=".\KhammaGhani.html">Back to Registeration</a>
+        <a href=".\KhammaGhani.html" style="text-decoration: none;">Back to Registeration</a>
       </div>
     </div>
     <div class="Payment">
       <img src="exampleqrcode.jpg" id="qrimage" alt="qrimage">
     </div>
   </div>
-
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
     qrcode = decodeURI(window.location.search).split("=")[1]
     document.getElementById("qrimage").src = qrcode;
