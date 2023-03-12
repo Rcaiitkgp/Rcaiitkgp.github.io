@@ -257,7 +257,7 @@ app.get("/mail", async function (req, res) {
     },
     from: process.env.GMAILID,
   });
-  const data = "<p><b>Congratulations!</b><br> You have successfully booked your pass/passes for Khamma Ghani - The Foodfest 2023. </p><p>Please find your pass in the attachment, a unique QR Code. </p><p>The pass is your unique QR Code which you need to bring at the time of the event for checking before entry to the venue. In case of registration of more than one pass, you are advised to come together at the venue for smooth verification </p><p>Please note:</p><p>Number of Passes Booked: "+req.query.passes+" <br><b>Date of Event: 17th March 2023<br>Timings: 07:00 PM onwards</b></p><p>Looking forward to your presence in the event. <br>Thanks for registering for Khamma Ghani</p><b>Team RCA IIT Kharagpur</b>"
+  const data = "<p><b>Congratulations!</b><br> You have successfully booked your pass/passes for Khamma Ghani - The Foodfest 2023. </p><p>Please find your pass in the attachment, a unique QR Code. </p><p>The pass is your unique QR Code which you need to bring at the time of the event for checking before entry to the venue. In case you have registered more than one pass for your family/friends at a time, you are advised to come altogether at the venue for smooth verification process. </p><p>Please note:</p><p>Number of Passes Booked: "+req.query.passes+" <br><b>Date of Event: 17th March 2023<br></b></p><p>Looking forward to your presence in the event. <br>Thanks for registering for Khamma Ghani</p><b>Team RCA IIT Kharagpur</b>"
   let mailOptions = {
     from: process.env.GMAILID, // sender address
     to: req.query.email, // list of receivers
