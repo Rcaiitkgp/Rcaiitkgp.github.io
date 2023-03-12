@@ -4,7 +4,7 @@ const updateButton = () => {
     couponNumber = document.getElementById('couponNumbers').value;
     if (couponNumber) {
         totalPrice = couponNumber * couponPrice;
-        document.getElementById('khamma-price-display').innerHTML = " - &#8377;" + totalPrice;
+        document.getElementById('khamma-price-display').innerHTML = " &#8377;" + totalPrice;
         console.log(totalPrice);
     }
 
