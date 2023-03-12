@@ -18,7 +18,7 @@
     }
     @media only screen and (max-width: 1200px) and (min-width: 768px) {
         .payment{
-            width: 500px;
+            width: 70vw;
         }
     }
    .payment_header
