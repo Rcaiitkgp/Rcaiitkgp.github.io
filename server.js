@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
+const md5 = require("md5");
 const app = express();
 // const session = require("express-session");
 // const passport = require("passport");
@@ -86,6 +87,7 @@ const userSchema = new mongoose.Schema({
   coupons_used: Number,
   token: String,
   short_url: String,
+  id2:String
 });
 const User = mongoose.model("User", userSchema);
 app.get("/",function(req,res){
@@ -146,6 +148,7 @@ app.post("/razorpay", async function (req, res) {
         coupons_used: 0,
         token: token,
         short_url: response.short_url,
+        id2: md5(response.id)
       });
       user.save();
       console.log("Updated!!");
@@ -177,7 +180,7 @@ app.get("/success/razorpay", async function (req, res) {
     }
   );
   const email = docs.email;
-  res.redirect("/mail?email=" + email + "&id=" + docs.id+"&passes="+docs.coupons);
+  res.redirect("/mail?email=" + email + "&id=" + docs.id2+"&passes="+docs.coupons);
 });
 
 //Sending mails using nodemailer
@@ -185,6 +188,10 @@ app.get("/mail2/:token", function (req, res) {
   const Transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com",
     port: 465,
+    secureConnection: false,
+    tls: {
+      rejectUnauthorized: false
+    },
     auth: {
       user: process.env.GMAILID,
       pass: process.env.GMAILAPPPASSWORD,
@@ -234,6 +241,10 @@ app.get("/mail", async function (req, res) {
   const Transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com",
     port: 465,
+    secureConnection: false,
+    tls: {
+      rejectUnauthorized: false
+    },
     auth: {
     user: process.env.GMAILID,
     pass: process.env.GMAILAPPPASSWORD
@@ -266,9 +277,9 @@ app.get("/mail", async function (req, res) {
 //Admin Part
 
 app.get("/check/:paymentLink/:password", async function (req, res) {
-  if (req.params.password === "test") {
+  if (req.params.password === process.env.TEST_PASSWORD) {
     //Check for correct coupon
-    const found = await User.find({ id: req.params.paymentLink }).exec();
+    const found = await User.find({ id2: req.params.paymentLink }).exec();
     console.log(found);
     if (found.length != 0) {
       if (
