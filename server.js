@@ -287,7 +287,7 @@ app.get("/check/:paymentLink/:password", async function (req, res) {
         found[0].coupons_used < found[0].coupons
       ) {
         const docs = await User.findOneAndUpdate(
-          { id: req.params.paymentLink },
+          { id2: req.params.paymentLink },
           { coupons_used: found[0].coupons_used + 1 },
           {
             new: true,
