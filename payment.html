@@ -163,7 +163,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="payment" style="border:2px solid rgba(255,102,0,1)">
+    <div class="payment" style="border:2px solid rgba(255,102,0,1);margin-bottom: 0.5rem;">
       <div class="payment_header">
         <div class="check"><i class="fa fa-check" aria-hidden="true"></i></div>
       </div>
@@ -174,8 +174,9 @@
         <a href=".\KhammaGhani.html" style="text-decoration: none;">Back to Registeration</a>
       </div>
     </div>
-    <div class="Payment">
-      <img src="exampleqrcode.jpg" id="qrimage" alt="qrimage">
+    <div class="Payment" id="qrcodecont">
+      <img src="exampleqrcode.jpg" id="qrimage" alt="qrimage" >
+      <div class="content"><a href="" download="rca_coupen.png" style="text-decoration: none;" id="qrdownloadimage">Download QR image</a></div>
     </div>
   </div>
   <script src="js/jquery.slicknav.min.js"></script>
@@ -183,6 +184,7 @@
   <script>
     qrcode = decodeURI(window.location.search).split("=")[1]
     document.getElementById("qrimage").src = qrcode;
+    document.getElementById("qrdownloadimage").href = qrcode;
     document.getElementById("qrimage").style.display = "block";
   </script>
 </body>

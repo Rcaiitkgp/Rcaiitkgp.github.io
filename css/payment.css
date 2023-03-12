@@ -6,7 +6,7 @@
 	{
 		border:1px solid #f86808;
         width: 500px;
-        margin: 2rem auto;
+        margin: 2rem auto 12rem auto ;
 		/* height:280px; */
         background:#fff;
         margin-bottom: 1.5rem;
@@ -18,8 +18,11 @@
     }
     @media only screen and (max-width: 1200px) and (min-width: 768px) {
         .payment{
-            width: 500px;
+            width: 70vw;
         }
+    }
+    #qrcodecont{
+        margin-bottom: 12rem;
     }
    .payment_header
    {
