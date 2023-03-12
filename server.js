@@ -77,7 +77,8 @@ mongoose.connect(
 
 const userSchema = new mongoose.Schema({
   email: String,
-  name: String,
+  firstName: String,
+  lastName: String,
   rollNumber: String,
   hall: String,
   roomNumber: String,
@@ -87,6 +88,7 @@ const userSchema = new mongoose.Schema({
   coupons_used: Number,
   token: String,
   short_url: String,
+  contact: String,
   id2:String
 });
 const User = mongoose.model("User", userSchema);
@@ -112,14 +114,15 @@ app.post("/razorpay", async function (req, res) {
       currency: "INR",
       description: req.body.description,
       customer: {
-        name: req.body.name,
+        name: req.body.FirstName+" "+req.body.LastName,
         email: req.body.email,
       },
       notes: {
         contact: req.body.contact,
         number_of_coupons: req.body.number_of_coupons,
         roll_number: req.body.rollNumber,
-        hall: req.body.hall,
+        hall: req.body.browser,
+        contact: req.body.contact,
         roomNumber: req.body.room,
         token: token,
       },
@@ -139,11 +142,14 @@ app.post("/razorpay", async function (req, res) {
       const user = new User({
         token: token,
         email: req.body.email,
+        firstName:req.body.FirstName,
+        lastName:req.body.LastName,
+        contact: req.body.contact,
         id: response.id,
         status: false,
         coupons: req.body.number_of_coupons,
-        roll_number: req.body.rollNumber,
-        hall: req.body.hall,
+        rollNumber: req.body.rollNumber,
+        hall: req.body.browser,
         roomNumber: req.body.room,
         coupons_used: 0,
         token: token,
