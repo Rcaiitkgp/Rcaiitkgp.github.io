@@ -185,10 +185,6 @@ app.get("/mail2/:token", function (req, res) {
   const Transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com",
     port: 465,
-    secureConnection: false,
-    tls: {
-      rejectUnauthorized: false
-    },
     auth: {
       user: process.env.GMAILID,
       pass: process.env.GMAILAPPPASSWORD,
@@ -238,10 +234,6 @@ app.get("/mail", async function (req, res) {
   const Transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com",
     port: 465,
-    secureConnection: false,
-    tls: {
-      rejectUnauthorized: false
-    },
     auth: {
     user: process.env.GMAILID,
     pass: process.env.GMAILAPPPASSWORD
