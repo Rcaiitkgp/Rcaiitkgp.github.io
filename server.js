@@ -277,9 +277,7 @@ app.get("/mail", async function (req, res) {
 //Admin Part
 
 app.get("/check/:paymentLink/:password", async function (req, res) {
-  console.log("IN");
-  if (req.params.password === process.env.TEST_PASSWORD) {
-    console.log("IN2")
+  if (req.params.password === "abjbvhbasiuj") {
     //Check for correct coupon
     const found = await User.find({ id2: req.params.paymentLink }).exec();
     console.log(found);
