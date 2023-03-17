@@ -71,7 +71,7 @@
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script>
         function onScanSuccess(decodedText, decodedResult) {
-            window.location.replace("https://teamrca.sourabhchoudhary.live/check/"+decodedText+"/test");
+            window.location.replace("http://localhost:8282/check/"+decodedText+"/skjdbvkjasbvbk");
             html5QrcodeScanner.clear()
         }
         var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 450});
