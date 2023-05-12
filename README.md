@@ -9,3 +9,7 @@ The backend can be found on branch named sourabh. It is currently disabled. Depl
 
 # Caution
 Don't merge both branches.
+
+# Created and manged with ❤️ by Team RCA (https://rcaiitkgp.com/team.html).
+
+A special thanks to all the contributors.
