@@ -12,4 +12,4 @@ Don't merge both branches.
 
 # Created and manged with ❤️ by Team RCA (https://rcaiitkgp.com/team.html).
 
-A special thanks to all the contributors.
+A special thanks to all the contributors (https://github.com/Rcaiitkgp/Rcaiitkgp.github.io/graphs/contributors).
