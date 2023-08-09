@@ -1443,6 +1443,13 @@ h3 {
     height: 600px;
   }
 }
+@media (min-width: 1700px){
+  .slider_area .single_slider {
+    height: 600px;
+  }
+}
+
+
 
 /* line 27, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text {
@@ -1552,6 +1559,12 @@ h3 {
 
   /* line 74, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_slider.scss */
   .slider_area .dog_thumb {
+    right: 10%;
+    text-align: right;
+  }
+}
+@media (min-width:1700px) {
+  .slider_area .dog_thumb{
     right: 10%;
     text-align: right;
   }
@@ -7191,7 +7204,6 @@ a.nav1-link6:active {
   border-bottom-left-radius: 1rem;
 }
 
-.khamma-page-right {}
 
 .khamma-form-heading {
   font-size: 1.5rem;
@@ -7254,7 +7266,12 @@ a.nav1-link6:active {
   div.pills1 {
     font-size: 18px;
   }
+  
 
+  .containerlogo{
+    display: flex;
+
+  }
 
 
   /*# sourceMappingURL=style.css.map */
@@ -7369,7 +7386,7 @@ a.nav1-link6:active {
 
   /*# sourceMappingURL=style.css.map */
   /*edited css*/
-  .tabs {}
+
 
   .address-right1 {
     margin: 10px;
