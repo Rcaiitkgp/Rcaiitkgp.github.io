@@ -21,6 +21,7 @@
 
 <body>
 
+  <!-- Modal -->
 
   <div class="content">
 
@@ -70,14 +71,39 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 form-group">
-                    <input type="submit" value="Register" id="submit" class="btn btn-primary rounded-0 py-2 px-4">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-default btn-primary btn-lg rounded-0 py-2 px-4 my-2"
+                    id="myBtn">Rules & Regulations</button>
+                  <div class="modal fade" id="myModal" role="dialog">
+
+
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Rules & Regulations</h5>
+                          <button type="button" class="btn-close" data-dismiss="modal"
+                            aria-label="Close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <ul>
+                            <li>
+                              <p>A small performance review will be conducted for all participants before the event</p>
+                            </li>
+                            <li>
+                              <p>We will make every effort to allocate your preffered performance slot, still there might be slight adjustment to the schedule for logistical or programmatic reasons</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6 form-group">
+                    <input type="submit" value="Register" id="submit" class="btn btn-primary rounded-0 py-2 px-4 my-2">
                     <span class="submitting"></span>
                   </div>
                 </div>
-
-
-
               </form>
 
               <div id="form-message-warning mt-4"></div>
@@ -123,6 +149,13 @@
   <script src="Registration/js/jquery.validate.min.js"></script>
   <script src="Registration/js/main.js"></script>
 
+  <script>
+    $(document).ready(function () {
+      $("#myBtn").click(function () {
+        $("#myModal").modal();
+      });
+    });
+  </script>
 </body>
 
 </html>
