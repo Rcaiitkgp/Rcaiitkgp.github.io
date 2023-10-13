@@ -16,11 +16,12 @@
   <!-- Style -->
   <link rel="stylesheet" href="Registration/css/style.css">
 
-  <title>RCA Selection</title>
+  <title>Malhar Performers</title>
 </head>
 
 <body>
 
+  <!-- Modal -->
 
   <div class="content">
 
@@ -29,86 +30,102 @@
         <div class="col-md-8">
           <div class="form h-100">
             <form method="post" onSubmit="document.getElementById('submit').disabled=true;"
-              action="https://script.google.com/macros/s/AKfycbzWR0IwkDwx7pCjJKqpZGwxXvOXghZ42e7VXKTKgvHnACRHhBcSFchgBhbej0Ob1Uc/exec"
+              action="https://script.google.com/macros/s/AKfycbyz39UZWhOuS8GkMs6Pc7eNGu2Iy7VSy22aFfd6WrgtUrJJ3bEaRlllQsr7925QMQ5X/exec"
               name="contact-form">
-              <h3>RCA Freshers Selection 2023</h3>
+              <h3>MALHAR PERFORMERS</h3>
+              <P>Event Date:- 13 OCT 2023</P>
+              <P>Event Timing:- 6PM TO 10PM</P>
+              <P>Event Venue:- Technology Club</P>
               <form class="mb-5" method="post" id="contactForm" name="contactForm">
                 <div class="row">
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="" class="col-form-label" >Name *</label>
+                  <div class="col-md-12 form-group mb-5">
+                    <label for="" class="col-form-label">Name *</label>
                     <input type="text" class="form-control" name="Name" id="name" placeholder="Your name" required>
                   </div>
-                  <div class="col-md-6 form-group mb-5">
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group mb-5">
                     <label for="" class="col-form-label">Email *</label>
                     <input type="text" class="form-control" name="Email" id="email" placeholder="Your email" required>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-md-6 form-group mb-5">
+                  <div class="col-md-12 form-group mb-5">
                     <label for="" class="col-form-label">Roll Number *</label>
                     <input type="text" class="form-control" name="Roll No." placeholder="Your Roll.No." required>
                   </div>
-                  <div class="col-md-6 form-group mb-5">
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group mb-5">
                     <label for="" class="col-form-label">Phone</label>
-                    <input type="text" class="form-control" name="Contact Number" id="phone" placeholder="Phone #" required>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="" class="col-form-label">Hall of Residence *</label>
-                    <input type="text" class="form-control" name="Hall" placeholder="Hall" required>
-                  </div>
-                  <div class="col-md-6 form-group mb-5">
-                    <label for="" class="col-form-label">City/State:</label>
-                    <input type="text" class="form-control" name="City" placeholder="City">
+                    <input type="text" class="form-control" name="Contact Number" id="phone" placeholder="Phone #"
+                      required>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group mb-5">
-                    <label for="" class="col-form-label">Other Involvement:</label>
-                    <input type="text" class="form-control" name="Other Involvements" placeholder="Other Involvement"required>
+                    <label for="" class="col-form-label">Hall</label>
+                    <input type="text" class="form-control" name="Hall" id="phone" placeholder="Hall"
+                      required>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-md-12 form-group mb-5">
+                    <label for="" class="col-form-label">What You are going to perform ?</label>
+                    <input type="text" class="form-control" name="What Your are going to perform"
+                      placeholder="What You are going to perform" required>
+                  </div>
+                </div>
+                <div class="row">
+
+                  <div class="col-md-12 form-group mb-5">
+                    <label for="" class="col-form-label">Prefarable Timing</label>
+                      <select type="text" class="form-control" name="Prefarable Timing"
+                      placeholder="Prefarable Timing" required>
+                        <option value="7:00PM - 7:30PM">7:00PM - 7:30PM</option>
+                        <option value="7:30PM - 8:00PM">7:30PM - 8:00PM</option>
+                        <option value="8:00PM - 8:30PM">8:00PM - 8:30PM</option>
+                        <option value="8:30PM - 9:00PM">8:30PM - 9:00PM</option>
+                        <option value="9:00PM - 9:30PM">9:00PM - 9:30PM</option>
+                        <option value="9:30PM - 10:00PM">9:30PM - 10:00PM</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="row">
+
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-default btn-primary btn-lg rounded-0 py-2 px-4 my-2"
+                    id="myBtn">Rules & Regulations</button>
+                  <div class="modal fade" id="myModal" role="dialog">
 
 
-                <div class="row">
-                  <div class="col-md-12 form-group mb-5">
-                    <label for="" class="col-form-label">Intrested Portfolio:</label>
-                    <select class="form-control" id="cars" name="Portfolio" required>
-                      <option value="Event Management">Event Management</option>
-                      <option value="Design">Design</option>
-                      <option value="Web Development">Web Development</option>
-                    </select>
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Rules & Regulations</h5>
+                          <button type="button" class="btn-close" data-dismiss="modal"
+                            aria-label="Close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <ul>
+                            <li>
+                              <p>A small performance review will be conducted for all participants before the event</p>
+                            </li>
+                            <li>
+
+                              <p>We will make every effort to allocate your preffered performance slot, still there might be slight adjustment to the schedule for logistical or programmatic reasons</p>
+
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 form-group mb-5">
-                    <label for="" class="col-form-label">Preferred Time Slot:</label>
-                    <select class="form-control" id="cars" name="Time Slots" required>
-                      <option value="9 Sept, 2:00PM">9 Sept, 2:00PM</option>
-                      <option value="9 Sept, 3:00PM">9 Sept, 3:00PM</option>
-                      <option value="9 Sept, 4:00PM">9 Sept, 4:00PM</option>
-                      <option value="9 Sept, 5:00PM">9 Sept, 5:00PM</option>
-                      <option value="10 Sept, 2:00PM">10 Sept, 2:00PM</option>
-                      <option value="10 Sept, 3:00PM">10 Sept, 3:00PM</option>
-                      <option value="10 Sept, 4:00PM">10 Sept, 4:00PM</option>
-                      <option value="10 Sept, 5:00PM">10 Sept, 5:00PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 form-group mb-5">
-                    <label for="message" class="col-form-label">Why you want to join RCA, IIT Kharagpur ?</label>
-                    <textarea name="Why do you want to join RCA ?" class="form-control"
-                      name="Why you want to join RCA, IIT Kharagpur ?" id="message" cols="30" rows="4"
-                      placeholder="Why you want to join RCA, IIT Kharagpur ?"required></textarea>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 form-group">
-                    <input type="submit" value="Send Message" id="submit"
-                      class="btn btn-primary rounded-0 py-2 px-4">
+
+
+                  <div class="col-md-6 form-group">
+                    <input type="submit" value="Register" id="submit" class="btn btn-primary rounded-0 py-2 px-4 my-2">
                     <span class="submitting"></span>
                   </div>
                 </div>
@@ -136,7 +153,7 @@
               </li>
               <li class="d-flex">
                 <span class="wrap-icon icon-phone mr-3"></span>
-                <span class="text">+91-7240437154</span>
+                <span class="text">+91-8302434347</span>
               </li>
               <li class="d-flex">
                 <span class="wrap-icon icon-envelope mr-3"></span>
@@ -157,6 +174,13 @@
   <script src="Registration/js/jquery.validate.min.js"></script>
   <script src="Registration/js/main.js"></script>
 
+  <script>
+    $(document).ready(function () {
+      $("#myBtn").click(function () {
+        $("#myModal").modal();
+      });
+    });
+  </script>
 </body>
 
 </html>
