@@ -86,17 +86,24 @@
         }).catch(err => {
             console.log(err);
         });
-        function changecamera(event){
-            html5QrcodeScanner.clear();
-            html5QrcodeScanner.start(event.target.value, { fps: 10, qrbox: 450});
+        config = {
+            fps: 10,
+            qrbox: 450
         }
-        
         function onScanSuccess(decodedText, decodedResult) {
             window.location.replace("http://127.0.0.1:8282/check/"+decodedText+"/abjbvhbasiuj");
             html5QrcodeScanner.clear()
         }
-        var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 450});
+        var html5QrcodeScanner = new Html5QrcodeScanner("reader", config);
+        html5QrcodeScanner.render(onScanSuccess);
+        
+        function changecamera(event){
+            html5QrcodeScanner.clear();
+            html5QrcodeScanner = new Html5QrcodeScanner("reader", config);
             html5QrcodeScanner.render(onScanSuccess);
+        }
+        
+    
     </script>
 </body>
 
