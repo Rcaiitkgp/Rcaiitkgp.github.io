@@ -43,15 +43,55 @@
         <div id="success-inner1">
         </div>
         <div  id="success-inner2">
-            <h2>Invalid QR code or your QR code is already scanned</h2>
+            <h3 style="color: red;" >Invalid QR code or your QR code is already scanned</h3>
+            <table class="table my-2">
+                <tr>
+                    <th>Error</th>
+                    <td><p id="error"></p></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td><p id="name"></p></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><p id="email"></p></td>
+                </tr>
+                <tr>
+                    <th>Total Coupons</th>
+                    <td><p id="total"></p></td>
+                </tr>
+                <tr>
+                    <th>Coupons Used</th>
+                    <td><p id="used"></p></td>
+                </tr>
+                <tr>
+                    <th>Roll Number</th>
+                    <td><p id="roll"></p></td>
+                </tr>
+            </table>
             <a href="http://localhost:5500/qrscanner.html" style="text-decoration: none;"><button type="button" class="btn btn-info my-2">Back to QR Scanner</button></a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
+        let url = new URL(window.location.href);
+        let error = url.searchParams.get("error");
+        let name = url.searchParams.get("name");
+        let email = url.searchParams.get("email");
+        let total = url.searchParams.get("coupons");
+        let used = url.searchParams.get("coupons_used");
+        let roll = url.searchParams.get("roll");
+        document.getElementById("error").innerText = error;
+        document.getElementById("name").innerText = name;
+        document.getElementById("email").innerText = email;
+        document.getElementById("total").innerText = total;
+        document.getElementById("used").innerText = used;
+        document.getElementById("roll").innerText = roll;
+        
         setTimeout(()=>{
             console.log("before")
-            window.location.replace("http://localhost:5500/qrscanner.html")
+            window.location.replace("http://localhost:5502/qrscanner.html")
         },3000)
     </script>
 </body>

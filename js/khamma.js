@@ -1,4 +1,4 @@
-const couponPrice = 280;
+const couponPrice = 320;
 let couponNumber = 0;
 const updateButton = () => {
     couponNumber = document.getElementById('couponNumbers').value;

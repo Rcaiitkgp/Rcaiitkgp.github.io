@@ -63,15 +63,36 @@
             <h2>Scan QR</h2>
         </div>
         <div id="success-inner2">
+            <select onchange="changecamera(event)" id="camera-select">
+                <option value="">Select Camera</option>
+            </select>
             <div style="display: flex;align-items: center;">
-                <div style="width: 700px;margin:1.5rem;" id="reader"></div>
+                <div style="width: 700px;margin:auto;" id="reader"></div>
             </div>
         </div>
     </div>
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script>
+        Html5Qrcode.getCameras().then(devices => {
+            if (devices && devices.length) {
+                devices.forEach(device => {
+                    const { id, label } = device;
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.label = label;
+                    document.getElementById('camera-select').appendChild(option);
+                });
+            }
+        }).catch(err => {
+            console.log(err);
+        });
+        function changecamera(event){
+            html5QrcodeScanner.clear();
+            html5QrcodeScanner.start(event.target.value, { fps: 10, qrbox: 450});
+        }
+        
         function onScanSuccess(decodedText, decodedResult) {
-            window.location.replace("http://localhost:8282/check/"+decodedText+"/skjdbvkjasbvbk");
+            window.location.replace("http://127.0.0.1:8282/check/"+decodedText+"/abjbvhbasiuj");
             html5QrcodeScanner.clear()
         }
         var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 450});

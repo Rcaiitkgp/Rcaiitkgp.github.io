@@ -7308,7 +7308,7 @@ a.nav1-link6:active {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
